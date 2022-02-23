@@ -16,24 +16,130 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
+    height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+}
 
 header {
     padding: 1em 0;
+    margin-bottom: 2em;
     background: #ECEFF1;
     text-align: center;
+    width: 100vw;
 }
 
 h1 {
+    font-size: 1.25rem;
     margin-bottom: .25em;
 }
 
+p {
+    font-size: .75rem;
+}
+
 svg {
-    margin: 2em auto;
+    margin-bottom: 2.5em;
+    min-height: 10rem;
 }
 
 footer {
     padding: 1em 0;
     background: #ECEFF1;
     text-align: center;
+    width: 100vw;
+}
+
+svg g {
+    font-size: .35rem;
+}
+
+svg g ~ text {
+    font-size: .75rem;
+}
+
+@media (min-width: 500px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    svg g {
+        font-size: .35rem;
+    }
+}
+
+@media (min-width: 750px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    svg {
+        height: 30vh;
+    }
+
+    text {
+        font-size: .45rem;
+    }
+
+    svg g ~ text {
+        font-size: .75rem;
+    }
+
+    svg g + text {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1050px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    text {
+        font-size: .5rem;
+    }
+
+    svg g ~ text {
+        font-size: .75rem;
+    }
+
+    svg g + text {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    text {
+        font-size: .75rem;
+    }
+
+    svg g ~ text {
+        font-size: 1rem;
+    }
+
+    svg g + text {
+        font-size: 1.25rem;
+    }
 }

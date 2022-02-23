@@ -14,17 +14,17 @@ async function drawLineChart(c, fill, color) {
     // 2. Create chart dimensions
     const dms = {
         width: window.innerWidth * 0.95,
-        height: 500,
+        height: window.outerHeight / 4,
         margins: {
-            top: 15,
+            top: 10,
             right: 15,
-            bottom: 40,
-            left: 75
+            bottom: 30,
+            left: 45
         }
     }
 
     dms.boundedWidth = dms.width - dms.margins.left - dms.margins.right
-    dms.boundedHeight = dms.height - dms.margins.top - dms.margins.bottom
+    dms.boundedHeight = dms.height - dms.margins.top - dms.margins.bottom - 25
 
     // 3. Draw canvas
     const wrapper = d3.select('#wrapper')
@@ -79,11 +79,16 @@ async function drawLineChart(c, fill, color) {
         .style('color', color)
         .style('transform', `translateY(${dms.boundedHeight}px)`)
 
+    const countryLabel = xAxis.append('text')
+            .attr('x', dms.boundedWidth / 2)
+            .attr('y', -dms.boundedHeight + 20)
+            .attr('fill', color)
+            .text(c)
+
     const xAxisLabel = xAxis.append('text')
             .attr('x', dms.boundedWidth / 2)
-            .attr('y', dms.margins.bottom)
+            .attr('y', dms.margins.bottom + 5)
             .attr('fill', color)
-            .style('font-size', '1rem')
             .text('Years')
 }
 
