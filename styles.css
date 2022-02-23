@@ -135,6 +135,10 @@ svg g ~ text {
         font-size: .75rem;
     }
 
+    #wrapper {
+        margin-left: 1em;
+    }
+
     svg g ~ text {
         font-size: 1rem;
     }
